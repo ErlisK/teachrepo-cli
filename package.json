@@ -1,0 +1,50 @@
+{
+  "name": "@teachrepo/cli",
+  "version": "0.1.0",
+  "description": "Official TeachRepo CLI — import repos, validate course YAML, scaffold new courses.",
+  "keywords": ["teachrepo", "cli", "course", "education", "markdown", "stripe"],
+  "homepage": "https://teachrepo.com/docs/cli",
+  "bugs": {
+    "url": "https://github.com/ErlisK/teachrepo-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErlisK/teachrepo-cli.git"
+  },
+  "license": "MIT",
+  "author": "TeachRepo <hello@teachrepo.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "teachrepo": "./bin/teachrepo.js"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "picocolors": "^1.0.0",
+    "undici": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
